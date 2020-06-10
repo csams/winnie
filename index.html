@@ -5,25 +5,25 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Winnie's Web Page">
+  <meta name="author" content="Christopher Sams">
 
   <title>Welcoming Winnie</title>
 
-  <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
-
-  <!-- Custom styles for this template -->
   <link rel="stylesheet" href="vendor/css/baguetteBox.min.css">
-  <link rel="stylesheet" href="vendor/css/grid-gallery.css">
-
+  <!-- <link rel="stylesheet" href="vendor/css/grid-gallery.css"> -->
+  <link rel="stylesheet" href="vendor/css/cards-gallery.css">
   <link rel="stylesheet" href="css/scrolling-nav.css">
 
   <link rel="icon" type="image/jpg" href="images/bear.jpg">
 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
   <style>
-      header{
-        background-color: mediumpurple;
+      .winnie-banner {
+        background-image: linear-gradient(to bottom,#4A00E0, #8E2DE2);
+        font-family: 'Montserrat', sans-serif;
       }
       body {
         background-image: url("images/dragon.jpg");
@@ -32,7 +32,6 @@
         background-size: cover;
       }
   </style>
-
 </head>
 
 <body id="page-top">
@@ -50,7 +49,7 @@
             <a class="nav-link js-scroll-trigger" href="#ultrasound">Ultrasound</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#mom">Mom's Progress</a>
+            <a class="nav-link js-scroll-trigger" href="#moms-progress">Mom's Progress</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#nursery">Nursery</a>
@@ -63,103 +62,181 @@
     </div>
   </nav>
 
-  <header>
-    <div class="container text-center">
-      <h1>Welcoming Gwendolyn Joyce Sams!</h1>
+  <header class="winnie-banner">
+    <div class="container text-center text-white">
+      <h1>Welcoming Gwendolyn "Winnie" Joyce Sams!</h1>
       <p class="lead">September 12, 2020</p>
     </div>
   </header>
 
-  <section id="ultrasound" class="gallery-block grid-gallery">
+  <section id="ultrasound" class="gallery-block cards-gallery">
     <div class="container">
       <div class="heading">
           <h2>Ultrasound</h2>
       </div>
       <div class="row">
-        <div class="col-md-6 col-lg-4 item">
-            <a class="lightbox" href="images/ultrasound/2176105_0036.JPG">
-                <img class="img-fluid image scale-on-hover" src="images/ultrasound/2176105_0036.JPG">
-            </a>
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 transform-on-hover">
+                <a class="lightbox" href="images/ultrasound/2176105_0036.JPG">
+                    <img class="img-fluid image scale-on-hover" src="images/ultrasound/2176105_0036.JPG" class="card-img-top">
+                </a>
+                <div class="card-body">
+                    <h6><a href="#">My pretty face!</a></h6>
+                    <p class="text-muted card-text">Just look at the cuteness!</p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-4 item">
-            <a class="lightbox" href="images/ultrasound/2176105_0018.JPG">
-                <img class="img-fluid image scale-on-hover" src="images/ultrasound/2176105_0018.JPG">
-            </a>
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 transform-on-hover">
+                <a class="lightbox" href="images/ultrasound/2176105_0018.JPG">
+                    <img class="img-fluid image scale-on-hover" src="images/ultrasound/2176105_0018.JPG" class="card-img-top">
+                </a>
+                <div class="card-body">
+                    <h6><a href="#">And my hoof!</a></h6>
+                    <p class="text-muted card-text">Little Miss Twinkletoes!</p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-4 item">
-            <a class="lightbox" href="images/ultrasound/2176105_0009.JPG">
-                <img class="img-fluid image scale-on-hover" src="images/ultrasound/2176105_0009.JPG">
-            </a>
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 transform-on-hover">
+                <a class="lightbox" href="images/ultrasound/2176105_0009.JPG">
+                    <img class="img-fluid image scale-on-hover" src="images/ultrasound/2176105_0009.JPG" class="card-img-top">
+                </a>
+                <div class="card-body">
+                    <h6><a href="#">And my.. er, well, I'm a girl!</a></h6>
+                    <p class="text-muted card-text">(Gah, you guys! Did you really..? *sigh*)</p>
+                </div>
+            </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="mom" class="gallery-block grid-gallery">
+  <section id="moms-progress" class="gallery-block cards-gallery">
     <div class="container">
       <div class="heading">
           <h2>Mom's Progress</h2>
       </div>
       <div class="row">
-        <div class="col-md-6 col-lg-4 item">
-            <a class="lightbox" href="images/mom/22_weeks.jpg">
-                <img class="img-fluid image scale-on-hover" src="images/mom/22_weeks.jpg">
-            </a>
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 transform-on-hover">
+                <a class="lightbox" href="images/mom/22_weeks.jpg">
+                    <img class="img-fluid image scale-on-hover" src="images/mom/22_weeks.jpg" class="card-img-top">
+                </a>
+                <div class="card-body">
+                    <h6><a href="#">22 Weeks!</a></h6>
+                    <p class="text-muted card-text">Just look at that bump!</p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-4 item">
-            <a class="lightbox" href="images/mom/26_weeks.jpg">
-                <img class="img-fluid image scale-on-hover" src="images/mom/26_weeks.jpg">
-            </a>
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 transform-on-hover">
+                <a class="lightbox" href="images/mom/26_weeks.jpg">
+                    <img class="img-fluid image scale-on-hover" src="images/mom/26_weeks.jpg" class="card-img-top">
+                </a>
+                <div class="card-body">
+                    <h6><a href="#">26 Weeks!</a></h6>
+                    <p class="text-muted card-text">The bun's rising!</p>
+                </div>
+            </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="nursery" class="gallery-block grid-gallery">
+  <section id="nursery" class="gallery-block cards-gallery">
     <div class="container">
       <div class="heading">
           <h2>Nursery</h2>
       </div>
       <div class="row">
-        <div class="col-md-6 col-lg-4 item">
-            <a class="lightbox" href="images/nursery/IMG_8787.jpg">
-                <img class="img-fluid image scale-on-hover" src="images/nursery/IMG_8787.jpg">
-            </a>
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 transform-on-hover">
+                <a class="lightbox" href="images/nursery/IMG_8872.jpg">
+                    <img class="img-fluid image scale-on-hover" src="images/nursery/IMG_8872.jpg" class="card-img-top">
+                </a>
+                <div class="card-body">
+                    <h6><a href="#">I have a bedroom!</a></h6>
+                    <p class="text-muted card-text">Didn't mom do a great job picking it all out??</p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-4 item">
-            <a class="lightbox" href="images/nursery/IMG_8824.jpg">
-                <img class="img-fluid image scale-on-hover" src="images/nursery/IMG_8824.jpg">
-            </a>
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 transform-on-hover">
+                <a class="lightbox" href="images/nursery/IMG_8824.jpg">
+                    <img class="img-fluid image scale-on-hover" src="images/nursery/IMG_8824.jpg" class="card-img-top">
+                </a>
+                <div class="card-body">
+                    <h6><a href="#">With pictures!</a></h6>
+                    <p class="text-muted card-text">I bet I'll like princesses and dragons!</p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-4 item">
-            <a class="lightbox" href="images/nursery/IMG_8804.jpg">
-                <img class="img-fluid image scale-on-hover" src="images/nursery/IMG_8804.jpg">
-            </a>
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 transform-on-hover">
+                <a class="lightbox" href="images/nursery/IMG_8804.jpg">
+                    <img class="img-fluid image scale-on-hover" src="images/nursery/IMG_8804.jpg" class="card-img-top">
+                </a>
+                <div class="card-body">
+                    <h6><a href="#">Here, see 'em better!</a></h6>
+                    <p class="text-muted card-text">Aren't they dreamy?</p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-4 item">
-            <a class="lightbox" href="images/nursery/IMG_8796.jpg">
-                <img class="img-fluid image scale-on-hover" src="images/nursery/IMG_8796.jpg">
-            </a>
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 transform-on-hover">
+                <a class="lightbox" href="images/nursery/IMG_8796.jpg">
+                    <img class="img-fluid image scale-on-hover" src="images/nursery/IMG_8796.jpg" class="card-img-top">
+                </a>
+                <div class="card-body">
+                    <h6><a href="#">Oh! Oh! And my stuffed animals!</a></h6>
+                    <p class="text-muted card-text">They're so snuggly!</p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-4 item">
-            <a class="lightbox" href="images/nursery/IMG_8825.jpg">
-                <img class="img-fluid image scale-on-hover" src="images/nursery/IMG_8825.jpg">
-            </a>
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 transform-on-hover">
+                <a class="lightbox" href="images/nursery/IMG_8825.jpg">
+                    <img class="img-fluid image scale-on-hover" src="images/nursery/IMG_8825.jpg" class="card-img-top">
+                </a>
+                <div class="card-body">
+                    <h6><a href="#">A picture of me from the future!</a></h6>
+                    <p class="text-muted card-text">Time travel is real, y'all!</p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-4 item">
-            <a class="lightbox" href="images/nursery/IMG_8827.jpg">
-                <img class="img-fluid image scale-on-hover" src="images/nursery/IMG_8827.jpg">
-            </a>
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 transform-on-hover">
+                <a class="lightbox" href="images/nursery/IMG_8827.jpg">
+                    <img class="img-fluid image scale-on-hover" src="images/nursery/IMG_8827.jpg" class="card-img-top">
+                </a>
+                <div class="card-body">
+                    <h6><a href="#">Look at my pretty curtains!</a></h6>
+                    <p class="text-muted card-text">I already have good taste.. ;)</p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-4 item">
-            <a class="lightbox" href="images/nursery/IMG_8830.jpg">
-                <img class="img-fluid image scale-on-hover" src="images/nursery/IMG_8830.jpg">
-            </a>
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 transform-on-hover">
+                <a class="lightbox" href="images/nursery/IMG_8830.jpg">
+                    <img class="img-fluid image scale-on-hover" src="images/nursery/IMG_8830.jpg" class="card-img-top">
+                </a>
+                <div class="card-body">
+                    <h6><a href="#">My Rocking Dragon and Kitty!</a></h6>
+                    <p class="text-muted card-text">I bet I can ride at <i>least</i> one of them...</p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-4 item">
-            <a class="lightbox" href="images/nursery/IMG_8872.jpg">
-                <img class="img-fluid image scale-on-hover" src="images/nursery/IMG_8872.jpg">
-            </a>
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 transform-on-hover">
+                <a class="lightbox" href="images/nursery/IMG_8787.jpg">
+                    <img class="img-fluid image scale-on-hover" src="images/nursery/IMG_8787.jpg" class="card-img-top">
+                </a>
+                <div class="card-body">
+                    <h6><a href="#">My first <i>actual</i> bed</a></h6>
+                    <p class="text-muted card-text">I start off pretty small, you know. :)</p>
+                </div>
+            </div>
         </div>
       </div>
     </div>
@@ -169,8 +246,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2>Baby Shower</h2>
-          <p class="lead">We're having a virtual baby shower over Zoom on July 25, 2020.</p>
+          <h2>The "Spoil Me" Zone!</h2>
+          <p class="lead">
+              Mom and dad say they're having a baby shower on computers. It's over something called Zoom on July 25th.
+          </p>
+          <p>I'll let you know when they tell me more!</p>
         </div>
       </div>
     </div>
@@ -197,7 +277,7 @@
 
   <script>
     window.addEventListener('load', function() {
-      baguetteBox.run('.grid-gallery');
+      baguetteBox.run('.cards-gallery');
     });
   </script>
 </body>
