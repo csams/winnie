@@ -4404,11 +4404,11 @@ var $elm$virtual_dom$VirtualDom$toHandlerInt = function (handler) {
 			return 3;
 	}
 };
-var $author$project$Sections$PictureGroup = function (a) {
+var $author$project$DataModel$PictureGroup = function (a) {
 	return {$: 'PictureGroup', a: a};
 };
-var $author$project$Sections$Announcement = function (a) {
-	return {$: 'Announcement', a: a};
+var $author$project$DataModel$Prose = function (a) {
+	return {$: 'Prose', a: a};
 };
 var $elm$html$Html$a = _VirtualDom_node('a');
 var $elm$html$Html$div = _VirtualDom_node('div');
@@ -4429,7 +4429,7 @@ var $elm$html$Html$Attributes$href = function (url) {
 var $elm$html$Html$Attributes$target = $elm$html$Html$Attributes$stringProperty('target');
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
-var $author$project$HomePage$announcement = $author$project$Sections$Announcement(
+var $author$project$HomePage$announcement = $author$project$DataModel$Prose(
 	{
 		headingClass: 'spoil-me',
 		longDesc: A2(
@@ -4474,50 +4474,59 @@ var $author$project$HomePage$announcement = $author$project$Sections$Announcemen
 var $author$project$HomePage$mom_pics = _List_fromArray(
 	[
 		{
+		bigUrl: 'images/mom/22_weeks.jpg',
 		longDesc: $elm$html$Html$text('Just look at that bump!'),
 		shortDesc: $elm$html$Html$text('22 Weeks!'),
-		url: 'images/mom/22_weeks.jpg'
+		smallUrl: 'images/mom/22_weeks_small.jpg'
 	},
 		{
+		bigUrl: 'images/mom/26_weeks.jpg',
 		longDesc: $elm$html$Html$text('The bun\'s rising!'),
 		shortDesc: $elm$html$Html$text('26 Weeks!'),
-		url: 'images/mom/26_weeks.jpg'
+		smallUrl: 'images/mom/26_weeks_small.jpg'
 	}
 	]);
 var $elm$html$Html$i = _VirtualDom_node('i');
 var $author$project$HomePage$nursery_pics = _List_fromArray(
 	[
 		{
+		bigUrl: 'images/nursery/IMG_8874.jpg',
 		longDesc: $elm$html$Html$text('Didn\'t mom do a great job picking it all out??'),
 		shortDesc: $elm$html$Html$text('I have a bedroom!'),
-		url: 'images/nursery/IMG_8874.jpg'
+		smallUrl: 'images/nursery/IMG_8874_small.jpg'
 	},
 		{
+		bigUrl: 'images/nursery/IMG_8824.jpg',
 		longDesc: $elm$html$Html$text('I bet I\'ll like princesses and dragons!'),
 		shortDesc: $elm$html$Html$text('With pictures!'),
-		url: 'images/nursery/IMG_8824.jpg'
+		smallUrl: 'images/nursery/IMG_8824_small.jpg'
 	},
 		{
+		bigUrl: 'images/nursery/IMG_8804.jpg',
 		longDesc: $elm$html$Html$text('Aren\'t they dreamy?'),
 		shortDesc: $elm$html$Html$text('Here, see \'em better!'),
-		url: 'images/nursery/IMG_8804.jpg'
+		smallUrl: 'images/nursery/IMG_8804_small.jpg'
 	},
 		{
+		bigUrl: 'images/nursery/IMG_8796.jpg',
 		longDesc: $elm$html$Html$text('They\'re so snuggly!'),
 		shortDesc: $elm$html$Html$text('Oh! Oh! And my stuffed animals!'),
-		url: 'images/nursery/IMG_8796.jpg'
+		smallUrl: 'images/nursery/IMG_8796_small.jpg'
 	},
 		{
+		bigUrl: 'images/nursery/IMG_8825.jpg',
 		longDesc: $elm$html$Html$text('Time travel is real, y\'all!'),
 		shortDesc: $elm$html$Html$text('A pic of me from the future!'),
-		url: 'images/nursery/IMG_8825.jpg'
+		smallUrl: 'images/nursery/IMG_8825_small.jpg'
 	},
 		{
+		bigUrl: 'images/nursery/IMG_8827.jpg',
 		longDesc: $elm$html$Html$text('I already have good taste.. ;)'),
 		shortDesc: $elm$html$Html$text('Look at my pretty curtains!'),
-		url: 'images/nursery/IMG_8827.jpg'
+		smallUrl: 'images/nursery/IMG_8827_small.jpg'
 	},
 		{
+		bigUrl: 'images/nursery/IMG_8830.jpg',
 		longDesc: A2(
 			$elm$html$Html$div,
 			_List_Nil,
@@ -4534,9 +4543,10 @@ var $author$project$HomePage$nursery_pics = _List_fromArray(
 					$elm$html$Html$text(' one of them...')
 				])),
 		shortDesc: $elm$html$Html$text('My Rocking Dragon and Kitty!'),
-		url: 'images/nursery/IMG_8830.jpg'
+		smallUrl: 'images/nursery/IMG_8830_small.jpg'
 	},
 		{
+		bigUrl: 'images/nursery/IMG_8787.jpg',
 		longDesc: $elm$html$Html$text('I start off pretty small, you know. :)'),
 		shortDesc: A2(
 			$elm$html$Html$div,
@@ -4553,30 +4563,33 @@ var $author$project$HomePage$nursery_pics = _List_fromArray(
 						])),
 					$elm$html$Html$text(' bed.')
 				])),
-		url: 'images/nursery/IMG_8787.jpg'
+		smallUrl: 'images/nursery/IMG_8787_small.jpg'
 	}
 	]);
 var $author$project$HomePage$ultrasound_pics = _List_fromArray(
 	[
 		{
+		bigUrl: 'images/ultrasound/2176105_0036.jpg',
 		longDesc: $elm$html$Html$text('Just look at the cuteness!'),
 		shortDesc: $elm$html$Html$text('My Pretty Face!'),
-		url: 'images/ultrasound/2176105_0036.jpg'
+		smallUrl: 'images/ultrasound/2176105_0036_small.jpg'
 	},
 		{
+		bigUrl: 'images/ultrasound/2176105_0018.jpg',
 		longDesc: $elm$html$Html$text('Little Miss Twinkletoes!'),
 		shortDesc: $elm$html$Html$text('And my hoof!'),
-		url: 'images/ultrasound/2176105_0018.jpg'
+		smallUrl: 'images/ultrasound/2176105_0018_small.jpg'
 	},
 		{
+		bigUrl: 'images/ultrasound/2176105_0009.jpg',
 		longDesc: $elm$html$Html$text('(Gah, you guys! Did you really...?! *sigh*)'),
 		shortDesc: $elm$html$Html$text('And.. er, well, I\'m a girl!'),
-		url: 'images/ultrasound/2176105_0009.jpg'
+		smallUrl: 'images/ultrasound/2176105_0009_small.jpg'
 	}
 	]);
 var $author$project$HomePage$model = _List_fromArray(
 	[
-		$author$project$Sections$PictureGroup(
+		$author$project$DataModel$PictureGroup(
 		{
 			meta: {
 				id: 'ultrasound',
@@ -4585,7 +4598,7 @@ var $author$project$HomePage$model = _List_fromArray(
 			},
 			pics: $author$project$HomePage$ultrasound_pics
 		}),
-		$author$project$Sections$PictureGroup(
+		$author$project$DataModel$PictureGroup(
 		{
 			meta: {
 				id: 'mom',
@@ -4594,7 +4607,7 @@ var $author$project$HomePage$model = _List_fromArray(
 			},
 			pics: $author$project$HomePage$mom_pics
 		}),
-		$author$project$Sections$PictureGroup(
+		$author$project$DataModel$PictureGroup(
 		{
 			meta: {
 				id: 'nursery',
@@ -4675,7 +4688,7 @@ var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
 var $elm$html$Html$header = _VirtualDom_node('header');
 var $elm$html$Html$p = _VirtualDom_node('p');
-var $author$project$Sections$renderBanner = A2(
+var $author$project$DataModel$renderBanner = A2(
 	$elm$html$Html$header,
 	_List_fromArray(
 		[
@@ -4711,7 +4724,7 @@ var $author$project$Sections$renderBanner = A2(
 				]))
 		]));
 var $elm$html$Html$footer = _VirtualDom_node('footer');
-var $author$project$Sections$renderFooter = A2(
+var $author$project$DataModel$renderFooter = A2(
 	$elm$html$Html$footer,
 	_List_fromArray(
 		[
@@ -4766,14 +4779,14 @@ var $elm$core$List$map = F2(
 var $elm$html$Html$nav = _VirtualDom_node('nav');
 var $elm$core$String$append = _String_append;
 var $elm$html$Html$li = _VirtualDom_node('li');
-var $author$project$Sections$navItem = function (sec) {
+var $author$project$DataModel$navItem = function (sec) {
 	var _v0 = function () {
 		if (sec.$ === 'PictureGroup') {
 			var group = sec.a;
 			return _Utils_Tuple2(group.meta.id, group.meta.name);
 		} else {
-			var ann = sec.a;
-			return _Utils_Tuple2(ann.meta.id, ann.meta.name);
+			var prose = sec.a;
+			return _Utils_Tuple2(prose.meta.id, prose.meta.name);
 		}
 	}();
 	var identifier = _v0.a;
@@ -4801,7 +4814,7 @@ var $author$project$Sections$navItem = function (sec) {
 var $elm$html$Html$span = _VirtualDom_node('span');
 var $elm$html$Html$Attributes$type_ = $elm$html$Html$Attributes$stringProperty('type');
 var $elm$html$Html$ul = _VirtualDom_node('ul');
-var $author$project$Sections$renderNavigation = function (picGroups) {
+var $author$project$DataModel$renderNavigation = function (picGroups) {
 	return A2(
 		$elm$html$Html$nav,
 		_List_fromArray(
@@ -4867,7 +4880,7 @@ var $author$project$Sections$renderNavigation = function (picGroups) {
 									[
 										$elm$html$Html$Attributes$class('navbar-nav ml-auto')
 									]),
-								A2($elm$core$List$map, $author$project$Sections$navItem, picGroups))
+								A2($elm$core$List$map, $author$project$DataModel$navItem, picGroups))
 							]))
 					]))
 			]));
@@ -4881,7 +4894,7 @@ var $elm$html$Html$Attributes$src = function (url) {
 		'src',
 		_VirtualDom_noJavaScriptOrHtmlUri(url));
 };
-var $author$project$Sections$renderPicture = function (pic) {
+var $author$project$DataModel$renderPicture = function (pic) {
 	return A2(
 		$elm$html$Html$div,
 		_List_fromArray(
@@ -4903,7 +4916,7 @@ var $author$project$Sections$renderPicture = function (pic) {
 						_List_fromArray(
 							[
 								$elm$html$Html$Attributes$class('lightbox'),
-								$elm$html$Html$Attributes$href(pic.url)
+								$elm$html$Html$Attributes$href(pic.bigUrl)
 							]),
 						_List_fromArray(
 							[
@@ -4912,7 +4925,7 @@ var $author$project$Sections$renderPicture = function (pic) {
 								_List_fromArray(
 									[
 										$elm$html$Html$Attributes$class('card-img-top'),
-										$elm$html$Html$Attributes$src(pic.url)
+										$elm$html$Html$Attributes$src(pic.smallUrl)
 									]),
 								_List_Nil)
 							])),
@@ -4951,75 +4964,8 @@ var $author$project$Sections$renderPicture = function (pic) {
 			]));
 };
 var $elm$html$Html$section = _VirtualDom_node('section');
-var $author$project$Sections$renderSection = function (sec) {
-	if (sec.$ === 'Announcement') {
-		var ann = sec.a;
-		return A2(
-			$elm$html$Html$section,
-			_List_fromArray(
-				[
-					$elm$html$Html$Attributes$class(ann.sectionClass),
-					$elm$html$Html$Attributes$id(ann.meta.id)
-				]),
-			_List_fromArray(
-				[
-					A2(
-					$elm$html$Html$div,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('container')
-						]),
-					_List_fromArray(
-						[
-							A2(
-							$elm$html$Html$div,
-							_List_fromArray(
-								[
-									$elm$html$Html$Attributes$class(
-									A2($elm$core$String$append, 'heading ', ann.headingClass))
-								]),
-							_List_fromArray(
-								[
-									A2(
-									$elm$html$Html$h2,
-									_List_Nil,
-									_List_fromArray(
-										[ann.meta.title]))
-								])),
-							A2(
-							$elm$html$Html$div,
-							_List_fromArray(
-								[
-									$elm$html$Html$Attributes$class('row')
-								]),
-							_List_fromArray(
-								[
-									A2(
-									$elm$html$Html$div,
-									_List_fromArray(
-										[
-											$elm$html$Html$Attributes$class('col-lg-8 mx-auto')
-										]),
-									_List_fromArray(
-										[
-											A2(
-											$elm$html$Html$p,
-											_List_fromArray(
-												[
-													$elm$html$Html$Attributes$class('lead')
-												]),
-											_List_fromArray(
-												[ann.shortDesc])),
-											A2(
-											$elm$html$Html$p,
-											_List_Nil,
-											_List_fromArray(
-												[ann.longDesc]))
-										]))
-								]))
-						]))
-				]));
-	} else {
+var $author$project$DataModel$renderSection = function (sec) {
+	if (sec.$ === 'PictureGroup') {
 		var group = sec.a;
 		return A2(
 			$elm$html$Html$section,
@@ -5058,15 +5004,82 @@ var $author$project$Sections$renderSection = function (sec) {
 								[
 									$elm$html$Html$Attributes$class('row')
 								]),
-							A2($elm$core$List$map, $author$project$Sections$renderPicture, group.pics))
+							A2($elm$core$List$map, $author$project$DataModel$renderPicture, group.pics))
+						]))
+				]));
+	} else {
+		var prose = sec.a;
+		return A2(
+			$elm$html$Html$section,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$class(prose.sectionClass),
+					$elm$html$Html$Attributes$id(prose.meta.id)
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$div,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('container')
+						]),
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$div,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class(
+									A2($elm$core$String$append, 'heading ', prose.headingClass))
+								]),
+							_List_fromArray(
+								[
+									A2(
+									$elm$html$Html$h2,
+									_List_Nil,
+									_List_fromArray(
+										[prose.meta.title]))
+								])),
+							A2(
+							$elm$html$Html$div,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('row')
+								]),
+							_List_fromArray(
+								[
+									A2(
+									$elm$html$Html$div,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$class('col-lg-8 mx-auto')
+										]),
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$p,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('lead')
+												]),
+											_List_fromArray(
+												[prose.shortDesc])),
+											A2(
+											$elm$html$Html$p,
+											_List_Nil,
+											_List_fromArray(
+												[prose.longDesc]))
+										]))
+								]))
 						]))
 				]));
 	}
 };
-var $author$project$Sections$renderSections = function (sections) {
-	return A2($elm$core$List$map, $author$project$Sections$renderSection, sections);
+var $author$project$DataModel$renderSections = function (sections) {
+	return A2($elm$core$List$map, $author$project$DataModel$renderSection, sections);
 };
-var $author$project$Sections$view = function (model) {
+var $author$project$DataModel$view = function (model) {
 	return A2(
 		$elm$html$Html$div,
 		_List_Nil,
@@ -5075,13 +5088,13 @@ var $author$project$Sections$view = function (model) {
 				[
 					_List_fromArray(
 					[
-						$author$project$Sections$renderNavigation(model),
-						$author$project$Sections$renderBanner
+						$author$project$DataModel$renderNavigation(model),
+						$author$project$DataModel$renderBanner
 					]),
-					$author$project$Sections$renderSections(model),
+					$author$project$DataModel$renderSections(model),
 					_List_fromArray(
-					[$author$project$Sections$renderFooter])
+					[$author$project$DataModel$renderFooter])
 				])));
 };
-var $author$project$HomePage$main = $author$project$Sections$view($author$project$HomePage$model);
+var $author$project$HomePage$main = $author$project$DataModel$view($author$project$HomePage$model);
 _Platform_export({'HomePage':{'init':_VirtualDom_init($author$project$HomePage$main)(0)(0)}});}(this));

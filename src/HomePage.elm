@@ -2,20 +2,24 @@ module HomePage exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Sections exposing (..)
+
+import DataModel exposing (..)
 
 
 ultrasound_pics : List (Picture a)
 ultrasound_pics =
-    [ { url = "images/ultrasound/2176105_0036.jpg"
+    [ { bigUrl = "images/ultrasound/2176105_0036.jpg"
+      , smallUrl = "images/ultrasound/2176105_0036_small.jpg"
       , shortDesc = text "My Pretty Face!"
       , longDesc = text "Just look at the cuteness!"
       }
-    , { url = "images/ultrasound/2176105_0018.jpg"
+    , { bigUrl = "images/ultrasound/2176105_0018.jpg"
+      , smallUrl = "images/ultrasound/2176105_0018_small.jpg"
       , shortDesc = text "And my hoof!"
       , longDesc = text "Little Miss Twinkletoes!"
       }
-    , { url = "images/ultrasound/2176105_0009.jpg"
+    , { bigUrl = "images/ultrasound/2176105_0009.jpg"
+      , smallUrl = "images/ultrasound/2176105_0009_small.jpg"
       , shortDesc = text "And.. er, well, I'm a girl!"
       , longDesc = text "(Gah, you guys! Did you really...?! *sigh*)"
       }
@@ -24,11 +28,13 @@ ultrasound_pics =
 
 mom_pics : List (Picture a)
 mom_pics =
-    [ { url = "images/mom/22_weeks.jpg"
+    [ { bigUrl = "images/mom/22_weeks.jpg"
+      , smallUrl = "images/mom/22_weeks_small.jpg"
       , shortDesc = text "22 Weeks!"
       , longDesc = text "Just look at that bump!"
       }
-    , { url = "images/mom/26_weeks.jpg"
+    , { bigUrl = "images/mom/26_weeks.jpg"
+      , smallUrl = "images/mom/26_weeks_small.jpg"
       , shortDesc = text "26 Weeks!"
       , longDesc = text "The bun's rising!"
       }
@@ -37,35 +43,43 @@ mom_pics =
 
 nursery_pics : List (Picture a)
 nursery_pics =
-    [ { url = "images/nursery/IMG_8874.jpg"
+    [ { bigUrl = "images/nursery/IMG_8874.jpg"
+      , smallUrl = "images/nursery/IMG_8874_small.jpg"
       , shortDesc = text "I have a bedroom!"
       , longDesc = text "Didn't mom do a great job picking it all out??"
       }
-    , { url = "images/nursery/IMG_8824.jpg"
+    , { bigUrl = "images/nursery/IMG_8824.jpg"
+      , smallUrl = "images/nursery/IMG_8824_small.jpg"
       , shortDesc = text "With pictures!"
       , longDesc = text "I bet I'll like princesses and dragons!"
       }
-    , { url = "images/nursery/IMG_8804.jpg"
+    , { bigUrl = "images/nursery/IMG_8804.jpg"
+      , smallUrl = "images/nursery/IMG_8804_small.jpg"
       , shortDesc = text "Here, see 'em better!"
       , longDesc = text "Aren't they dreamy?"
       }
-    , { url = "images/nursery/IMG_8796.jpg"
+    , { bigUrl = "images/nursery/IMG_8796.jpg"
+      , smallUrl = "images/nursery/IMG_8796_small.jpg"
       , shortDesc = text "Oh! Oh! And my stuffed animals!"
       , longDesc = text "They're so snuggly!"
       }
-    , { url = "images/nursery/IMG_8825.jpg"
+    , { bigUrl = "images/nursery/IMG_8825.jpg"
+      , smallUrl = "images/nursery/IMG_8825_small.jpg"
       , shortDesc = text "A pic of me from the future!"
       , longDesc = text "Time travel is real, y'all!"
       }
-    , { url = "images/nursery/IMG_8827.jpg"
+    , { bigUrl = "images/nursery/IMG_8827.jpg"
+      , smallUrl = "images/nursery/IMG_8827_small.jpg"
       , shortDesc = text "Look at my pretty curtains!"
       , longDesc = text "I already have good taste.. ;)"
       }
-    , { url = "images/nursery/IMG_8830.jpg"
+    , { bigUrl = "images/nursery/IMG_8830.jpg"
+      , smallUrl = "images/nursery/IMG_8830_small.jpg"
       , shortDesc = text "My Rocking Dragon and Kitty!"
       , longDesc = div [] [ text "I bet I can ride at ", i [] [ text "least" ], text " one of them..." ]
       }
-    , { url = "images/nursery/IMG_8787.jpg"
+    , { bigUrl = "images/nursery/IMG_8787.jpg"
+      , smallUrl = "images/nursery/IMG_8787_small.jpg"
       , shortDesc = div [] [ text "My first ", i [] [ text "actual" ], text " bed." ]
       , longDesc = text "I start off pretty small, you know. :)"
       }
@@ -74,7 +88,7 @@ nursery_pics =
 
 announcement : Section a
 announcement =
-    Announcement
+    Prose
         { meta =
             { id = "shower"
             , name = text "Spoil Me!"

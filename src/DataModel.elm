@@ -1,11 +1,12 @@
-module Sections exposing (..)
+module DataModel exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
 
 
 type alias Picture a =
-    { url : String
+    { bigUrl : String
+    , smallUrl : String
     , shortDesc : Html a
     , longDesc : Html a
     }
@@ -23,7 +24,7 @@ type Section a
         { meta : Meta a
         , pics : List (Picture a)
         }
-    | Announcement
+    | Prose
         { meta : Meta a
         , sectionClass : String
         , headingClass : String
@@ -44,8 +45,8 @@ navItem sec =
                 PictureGroup group ->
                     ( group.meta.id, group.meta.name )
 
-                Announcement ann ->
-                    ( ann.meta.id, ann.meta.name )
+                Prose prose ->
+                    ( prose.meta.id, prose.meta.name )
     in
     li [ class "nav-item" ]
         [ a [ class "nav-link js-scroll-trigger", href <| String.append "#" identifier ]
@@ -53,7 +54,7 @@ navItem sec =
         ]
 
 
-renderNavigation : Model a -> Html.Html a
+renderNavigation : Model a -> Html a
 renderNavigation picGroups =
     nav
         [ class "navbar navbar-expand-lg navbar-dark bg-dark fixed-top", id "mainNav" ]
@@ -101,8 +102,8 @@ renderPicture : Picture a -> Html a
 renderPicture pic =
     div [ class "col-md-6 col-lg-4" ]
         [ div [ class "card border-0 transform-on-hover" ]
-            [ a [ class "lightbox", href pic.url ]
-                [ img [ class "card-img-top", src pic.url ]
+            [ a [ class "lightbox", href pic.bigUrl ]
+                [ img [ class "card-img-top", src pic.smallUrl ]
                     []
                 ]
             , div [ class "card-body" ]
@@ -120,24 +121,6 @@ renderPicture pic =
 renderSection : Section a -> Html a
 renderSection sec =
     case sec of
-        Announcement ann ->
-            section [ class ann.sectionClass, id ann.meta.id ]
-                [ div [ class "container" ]
-                    [ div [ class <| String.append "heading " ann.headingClass ]
-                        [ h2 []
-                            [ ann.meta.title ]
-                        ]
-                    , div [ class "row" ]
-                        [ div [ class "col-lg-8 mx-auto" ]
-                            [ p [ class "lead" ]
-                                [ ann.shortDesc ]
-                            , p []
-                                [ ann.longDesc ]
-                            ]
-                        ]
-                    ]
-                ]
-
         PictureGroup group ->
             section [ class "gallery-block cards-gallery", id group.meta.id ]
                 [ div [ class "container" ]
@@ -153,13 +136,31 @@ renderSection sec =
                     ]
                 ]
 
+        Prose prose ->
+            section [ class prose.sectionClass, id prose.meta.id ]
+                [ div [ class "container" ]
+                    [ div [ class <| String.append "heading " prose.headingClass ]
+                        [ h2 []
+                            [ prose.meta.title ]
+                        ]
+                    , div [ class "row" ]
+                        [ div [ class "col-lg-8 mx-auto" ]
+                            [ p [ class "lead" ]
+                                [ prose.shortDesc ]
+                            , p []
+                                [ prose.longDesc ]
+                            ]
+                        ]
+                    ]
+                ]
 
-renderSections : Model a -> List (Html.Html a)
+
+renderSections : Model a -> List (Html a)
 renderSections sections =
     List.map renderSection sections
 
 
-view : Model a -> Html.Html a
+view : Model a -> Html a
 view model =
     div []
         (List.concat
