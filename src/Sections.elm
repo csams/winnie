@@ -25,8 +25,8 @@ type Section a
         }
     | Announcement
         { meta : Meta a
-        , headingClass : String
         , sectionClass : String
+        , headingClass : String
         , shortDesc : Html a
         , longDesc : Html a
         }
@@ -162,9 +162,9 @@ renderSections sections =
 view : Model a -> Html.Html a
 view model =
     div []
-        ([ renderNavigation model
-         , renderBanner
-         ]
-            ++ renderSections model
-            ++ [ renderFooter ]
+        (List.concat
+            [ [ renderNavigation model, renderBanner ]
+            , renderSections model
+            , [ renderFooter ]
+            ]
         )

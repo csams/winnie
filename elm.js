@@ -4605,6 +4605,72 @@ var $author$project$HomePage$model = _List_fromArray(
 		}),
 		$author$project$HomePage$announcement
 	]);
+var $elm$core$List$foldrHelper = F4(
+	function (fn, acc, ctr, ls) {
+		if (!ls.b) {
+			return acc;
+		} else {
+			var a = ls.a;
+			var r1 = ls.b;
+			if (!r1.b) {
+				return A2(fn, a, acc);
+			} else {
+				var b = r1.a;
+				var r2 = r1.b;
+				if (!r2.b) {
+					return A2(
+						fn,
+						a,
+						A2(fn, b, acc));
+				} else {
+					var c = r2.a;
+					var r3 = r2.b;
+					if (!r3.b) {
+						return A2(
+							fn,
+							a,
+							A2(
+								fn,
+								b,
+								A2(fn, c, acc)));
+					} else {
+						var d = r3.a;
+						var r4 = r3.b;
+						var res = (ctr > 500) ? A3(
+							$elm$core$List$foldl,
+							fn,
+							acc,
+							$elm$core$List$reverse(r4)) : A4($elm$core$List$foldrHelper, fn, acc, ctr + 1, r4);
+						return A2(
+							fn,
+							a,
+							A2(
+								fn,
+								b,
+								A2(
+									fn,
+									c,
+									A2(fn, d, res))));
+					}
+				}
+			}
+		}
+	});
+var $elm$core$List$foldr = F3(
+	function (fn, acc, ls) {
+		return A4($elm$core$List$foldrHelper, fn, acc, 0, ls);
+	});
+var $elm$core$List$append = F2(
+	function (xs, ys) {
+		if (!ys.b) {
+			return xs;
+		} else {
+			return A3($elm$core$List$foldr, $elm$core$List$cons, ys, xs);
+		}
+	});
+var $elm$core$List$concat = function (lists) {
+	return A3($elm$core$List$foldr, $elm$core$List$append, _List_Nil, lists);
+};
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
 var $elm$html$Html$header = _VirtualDom_node('header');
@@ -4683,61 +4749,6 @@ var $elm$virtual_dom$VirtualDom$attribute = F2(
 var $elm$html$Html$Attributes$attribute = $elm$virtual_dom$VirtualDom$attribute;
 var $elm$html$Html$button = _VirtualDom_node('button');
 var $elm$html$Html$Attributes$id = $elm$html$Html$Attributes$stringProperty('id');
-var $elm$core$List$foldrHelper = F4(
-	function (fn, acc, ctr, ls) {
-		if (!ls.b) {
-			return acc;
-		} else {
-			var a = ls.a;
-			var r1 = ls.b;
-			if (!r1.b) {
-				return A2(fn, a, acc);
-			} else {
-				var b = r1.a;
-				var r2 = r1.b;
-				if (!r2.b) {
-					return A2(
-						fn,
-						a,
-						A2(fn, b, acc));
-				} else {
-					var c = r2.a;
-					var r3 = r2.b;
-					if (!r3.b) {
-						return A2(
-							fn,
-							a,
-							A2(
-								fn,
-								b,
-								A2(fn, c, acc)));
-					} else {
-						var d = r3.a;
-						var r4 = r3.b;
-						var res = (ctr > 500) ? A3(
-							$elm$core$List$foldl,
-							fn,
-							acc,
-							$elm$core$List$reverse(r4)) : A4($elm$core$List$foldrHelper, fn, acc, ctr + 1, r4);
-						return A2(
-							fn,
-							a,
-							A2(
-								fn,
-								b,
-								A2(
-									fn,
-									c,
-									A2(fn, d, res))));
-					}
-				}
-			}
-		}
-	});
-var $elm$core$List$foldr = F3(
-	function (fn, acc, ls) {
-		return A4($elm$core$List$foldrHelper, fn, acc, 0, ls);
-	});
 var $elm$core$List$map = F2(
 	function (f, xs) {
 		return A3(
@@ -5059,16 +5070,18 @@ var $author$project$Sections$view = function (model) {
 	return A2(
 		$elm$html$Html$div,
 		_List_Nil,
-		_Utils_ap(
+		$elm$core$List$concat(
 			_List_fromArray(
 				[
-					$author$project$Sections$renderNavigation(model),
-					$author$project$Sections$renderBanner
-				]),
-			_Utils_ap(
-				$author$project$Sections$renderSections(model),
-				_List_fromArray(
-					[$author$project$Sections$renderFooter]))));
+					_List_fromArray(
+					[
+						$author$project$Sections$renderNavigation(model),
+						$author$project$Sections$renderBanner
+					]),
+					$author$project$Sections$renderSections(model),
+					_List_fromArray(
+					[$author$project$Sections$renderFooter])
+				])));
 };
 var $author$project$HomePage$main = $author$project$Sections$view($author$project$HomePage$model);
 _Platform_export({'HomePage':{'init':_VirtualDom_init($author$project$HomePage$main)(0)(0)}});}(this));
