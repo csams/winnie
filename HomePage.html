@@ -17,20 +17,22 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
 
   <style>
-      .heading.spoil-me {
-        margin-bottom: 50px;
-        text-align: center;
-      }
-      .winnie-banner {
-        background-image: linear-gradient(to bottom,#4A00E0, #8E2DE2);
-        font-family: 'Montserrat', sans-serif;
-      }
-      body {
-        background-image: url("images/dragon.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-      }
+    .heading.spoil-me {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .winnie-banner {
+      background-image: linear-gradient(to bottom, #4A00E0, #8E2DE2);
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background-image: url("images/dragon.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
   </style>
 </head>
 
@@ -42,13 +44,13 @@
   <script src="vendor/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/js/baguetteBox.min.js"></script>
   <script src="vendor/js/jquery.easing.min.js"></script>
-  <script src="elm.js"></script>
+  <script src="js/elm.js"></script>
 
   <script>
-      var app = Elm.HomePage.init({
-          node: document.getElementById("elm-app")
-      });
-      baguetteBox.run('.cards-gallery');
+    var app = Elm.HomePage.init({
+      node: document.getElementById("elm-app")
+    });
+    baguetteBox.run('.cards-gallery');
   </script>
   <script src="js/scrolling-nav.js"></script>
 </body>
