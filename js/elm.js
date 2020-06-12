@@ -77,7 +77,7 @@ function A9(fun, a, b, c, d, e, f, g, h, i) {
   return fun.a === 9 ? fun.f(a, b, c, d, e, f, g, h, i) : fun(a)(b)(c)(d)(e)(f)(g)(h)(i);
 }
 
-console.warn('Compiled in DEV mode. Follow the advice at https://elm-lang.org/0.19.1/optimize for better performance and smaller assets.');
+
 
 
 // EQUALITY
@@ -113,7 +113,7 @@ function _Utils_eqHelp(x, y, depth, stack)
 		return true;
 	}
 
-	/**/
+	/**_UNUSED/
 	if (x.$ === 'Set_elm_builtin')
 	{
 		x = $elm$core$Set$toList(x);
@@ -126,7 +126,7 @@ function _Utils_eqHelp(x, y, depth, stack)
 	}
 	//*/
 
-	/**_UNUSED/
+	/**/
 	if (x.$ < 0)
 	{
 		x = $elm$core$Dict$toList(x);
@@ -161,7 +161,7 @@ function _Utils_cmp(x, y, ord)
 		return x === y ? /*EQ*/ 0 : x < y ? /*LT*/ -1 : /*GT*/ 1;
 	}
 
-	/**/
+	/**_UNUSED/
 	if (x instanceof String)
 	{
 		var a = x.valueOf();
@@ -170,10 +170,10 @@ function _Utils_cmp(x, y, ord)
 	}
 	//*/
 
-	/**_UNUSED/
+	/**/
 	if (typeof x.$ === 'undefined')
 	//*/
-	/**/
+	/**_UNUSED/
 	if (x.$[0] === '#')
 	//*/
 	{
@@ -203,17 +203,17 @@ var _Utils_compare = F2(function(x, y)
 
 // COMMON VALUES
 
-var _Utils_Tuple0_UNUSED = 0;
-var _Utils_Tuple0 = { $: '#0' };
+var _Utils_Tuple0 = 0;
+var _Utils_Tuple0_UNUSED = { $: '#0' };
 
-function _Utils_Tuple2_UNUSED(a, b) { return { a: a, b: b }; }
-function _Utils_Tuple2(a, b) { return { $: '#2', a: a, b: b }; }
+function _Utils_Tuple2(a, b) { return { a: a, b: b }; }
+function _Utils_Tuple2_UNUSED(a, b) { return { $: '#2', a: a, b: b }; }
 
-function _Utils_Tuple3_UNUSED(a, b, c) { return { a: a, b: b, c: c }; }
-function _Utils_Tuple3(a, b, c) { return { $: '#3', a: a, b: b, c: c }; }
+function _Utils_Tuple3(a, b, c) { return { a: a, b: b, c: c }; }
+function _Utils_Tuple3_UNUSED(a, b, c) { return { $: '#3', a: a, b: b, c: c }; }
 
-function _Utils_chr_UNUSED(c) { return c; }
-function _Utils_chr(c) { return new String(c); }
+function _Utils_chr(c) { return c; }
+function _Utils_chr_UNUSED(c) { return new String(c); }
 
 
 // RECORDS
@@ -264,11 +264,11 @@ function _Utils_ap(xs, ys)
 
 
 
-var _List_Nil_UNUSED = { $: 0 };
-var _List_Nil = { $: '[]' };
+var _List_Nil = { $: 0 };
+var _List_Nil_UNUSED = { $: '[]' };
 
-function _List_Cons_UNUSED(hd, tl) { return { $: 1, a: hd, b: tl }; }
-function _List_Cons(hd, tl) { return { $: '::', a: hd, b: tl }; }
+function _List_Cons(hd, tl) { return { $: 1, a: hd, b: tl }; }
+function _List_Cons_UNUSED(hd, tl) { return { $: '::', a: hd, b: tl }; }
 
 
 var _List_cons = F2(_List_Cons);
@@ -499,12 +499,12 @@ var _JsArray_appendN = F3(function(n, dest, source)
 
 // LOG
 
-var _Debug_log_UNUSED = F2(function(tag, value)
+var _Debug_log = F2(function(tag, value)
 {
 	return value;
 });
 
-var _Debug_log = F2(function(tag, value)
+var _Debug_log_UNUSED = F2(function(tag, value)
 {
 	console.log(tag + ': ' + _Debug_toString(value));
 	return value;
@@ -530,12 +530,12 @@ function _Debug_todoCase(moduleName, region, value)
 
 // TO STRING
 
-function _Debug_toString_UNUSED(value)
+function _Debug_toString(value)
 {
 	return '<internals>';
 }
 
-function _Debug_toString(value)
+function _Debug_toString_UNUSED(value)
 {
 	return _Debug_toAnsiString(false, value);
 }
@@ -720,13 +720,13 @@ function _Debug_toHexDigit(n)
 // CRASH
 
 
-function _Debug_crash_UNUSED(identifier)
+function _Debug_crash(identifier)
 {
 	throw new Error('https://github.com/elm/core/blob/1.0.0/hints/' + identifier + '.md');
 }
 
 
-function _Debug_crash(identifier, fact1, fact2, fact3, fact4)
+function _Debug_crash_UNUSED(identifier, fact1, fact2, fact3, fact4)
 {
 	switch(identifier)
 	{
@@ -784,11 +784,11 @@ function _Debug_crash(identifier, fact1, fact2, fact3, fact4)
 
 function _Debug_regionToString(region)
 {
-	if (region.start.line === region.end.line)
+	if (region.O.B === region.W.B)
 	{
-		return 'on line ' + region.start.line;
+		return 'on line ' + region.O.B;
 	}
-	return 'on lines ' + region.start.line + ' through ' + region.end.line;
+	return 'on lines ' + region.O.B + ' through ' + region.W.B;
 }
 
 
@@ -1212,7 +1212,7 @@ function _Char_toLocaleLower(char)
 
 
 
-/**/
+/**_UNUSED/
 function _Json_errorToString(error)
 {
 	return $elm$json$Json$Decode$errorToString(error);
@@ -1616,11 +1616,11 @@ var _Json_encode = F2(function(indentLevel, value)
 	return JSON.stringify(_Json_unwrap(value), null, indentLevel) + '';
 });
 
-function _Json_wrap(value) { return { $: 0, a: value }; }
-function _Json_unwrap(value) { return value.a; }
+function _Json_wrap_UNUSED(value) { return { $: 0, a: value }; }
+function _Json_unwrap_UNUSED(value) { return value.a; }
 
-function _Json_wrap_UNUSED(value) { return value; }
-function _Json_unwrap_UNUSED(value) { return value; }
+function _Json_wrap(value) { return value; }
+function _Json_unwrap(value) { return value; }
 
 function _Json_emptyArray() { return []; }
 function _Json_emptyObject() { return {}; }
@@ -1857,9 +1857,9 @@ var _Platform_worker = F4(function(impl, flagDecoder, debugMetadata, args)
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.init,
-		impl.update,
-		impl.subscriptions,
+		impl.ab,
+		impl.aw,
+		impl.aY,
 		function() { return function() {} }
 	);
 });
@@ -1872,7 +1872,7 @@ var _Platform_worker = F4(function(impl, flagDecoder, debugMetadata, args)
 function _Platform_initialize(flagDecoder, args, init, update, subscriptions, stepperBuilder)
 {
 	var result = A2(_Json_run, flagDecoder, _Json_wrap(args ? args['flags'] : undefined));
-	$elm$core$Result$isOk(result) || _Debug_crash(2 /**/, _Json_errorToString(result.a) /**/);
+	$elm$core$Result$isOk(result) || _Debug_crash(2 /**_UNUSED/, _Json_errorToString(result.a) /**/);
 	var managers = {};
 	var initPair = init(result.a);
 	var model = initPair.a;
@@ -2316,7 +2316,7 @@ function _Platform_setupIncomingPort(name, sendToApp)
 //
 
 
-function _Platform_export_UNUSED(exports)
+function _Platform_export(exports)
 {
 	scope['Elm']
 		? _Platform_mergeExportsProd(scope['Elm'], exports)
@@ -2337,7 +2337,7 @@ function _Platform_mergeExportsProd(obj, exports)
 }
 
 
-function _Platform_export(exports)
+function _Platform_export_UNUSED(exports)
 {
 	scope['Elm']
 		? _Platform_mergeExportsDebug('Elm', scope['Elm'], exports)
@@ -2377,10 +2377,10 @@ var _VirtualDom_init = F4(function(virtualNode, flagDecoder, debugMetadata, args
 {
 	// NOTE: this function needs _Platform_export available to work
 
-	/**_UNUSED/
+	/**/
 	var node = args['node'];
 	//*/
-	/**/
+	/**_UNUSED/
 	var node = args && args['node'] ? args['node'] : _Debug_crash(0);
 	//*/
 
@@ -2635,24 +2635,24 @@ function _VirtualDom_noInnerHtmlOrFormAction(key)
 	return key == 'innerHTML' || key == 'formAction' ? 'data-' + key : key;
 }
 
-function _VirtualDom_noJavaScriptUri_UNUSED(value)
+function _VirtualDom_noJavaScriptUri(value)
 {
 	return /^javascript:/i.test(value.replace(/\s/g,'')) ? '' : value;
 }
 
-function _VirtualDom_noJavaScriptUri(value)
+function _VirtualDom_noJavaScriptUri_UNUSED(value)
 {
 	return /^javascript:/i.test(value.replace(/\s/g,''))
 		? 'javascript:alert("This is an XSS vector. Please use ports or web components instead.")'
 		: value;
 }
 
-function _VirtualDom_noJavaScriptOrHtmlUri_UNUSED(value)
+function _VirtualDom_noJavaScriptOrHtmlUri(value)
 {
 	return /^\s*(javascript:|data:text\/html)/i.test(value) ? '' : value;
 }
 
-function _VirtualDom_noJavaScriptOrHtmlUri(value)
+function _VirtualDom_noJavaScriptOrHtmlUri_UNUSED(value)
 {
 	return /^\s*(javascript:|data:text\/html)/i.test(value)
 		? 'javascript:alert("This is an XSS vector. Please use ports or web components instead.")'
@@ -2704,9 +2704,9 @@ var _VirtualDom_mapEventTuple = F2(function(func, tuple)
 var _VirtualDom_mapEventRecord = F2(function(func, record)
 {
 	return {
-		message: func(record.message),
-		stopPropagation: record.stopPropagation,
-		preventDefault: record.preventDefault
+		o: func(record.o),
+		P: record.P,
+		L: record.L
 	}
 });
 
@@ -2974,11 +2974,11 @@ function _VirtualDom_makeCallback(eventNode, initialHandler)
 		// 3 = Custom
 
 		var value = result.a;
-		var message = !tag ? value : tag < 3 ? value.a : value.message;
-		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.stopPropagation;
+		var message = !tag ? value : tag < 3 ? value.a : value.o;
+		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.P;
 		var currentEventNode = (
 			stopPropagation && event.stopPropagation(),
-			(tag == 2 ? value.b : tag == 3 && value.preventDefault) && event.preventDefault(),
+			(tag == 2 ? value.b : tag == 3 && value.L) && event.preventDefault(),
 			eventNode
 		);
 		var tagger;
@@ -3914,15 +3914,15 @@ function _VirtualDom_dekey(keyedNode)
 		b: keyedNode.b
 	};
 }
-var $elm$core$Basics$EQ = {$: 'EQ'};
-var $elm$core$Basics$GT = {$: 'GT'};
-var $elm$core$Basics$LT = {$: 'LT'};
+var $elm$core$Basics$EQ = 1;
+var $elm$core$Basics$GT = 2;
+var $elm$core$Basics$LT = 0;
 var $elm$core$List$cons = _List_cons;
 var $elm$core$Dict$foldr = F3(
 	function (func, acc, t) {
 		foldr:
 		while (true) {
-			if (t.$ === 'RBEmpty_elm_builtin') {
+			if (t.$ === -2) {
 				return acc;
 			} else {
 				var key = t.b;
@@ -3967,7 +3967,7 @@ var $elm$core$Dict$keys = function (dict) {
 		dict);
 };
 var $elm$core$Set$toList = function (_v0) {
-	var dict = _v0.a;
+	var dict = _v0;
 	return $elm$core$Dict$keys(dict);
 };
 var $elm$core$Elm$JsArray$foldr = _JsArray_foldr;
@@ -3977,7 +3977,7 @@ var $elm$core$Array$foldr = F3(
 		var tail = _v0.d;
 		var helper = F2(
 			function (node, acc) {
-				if (node.$ === 'SubTree') {
+				if (!node.$) {
 					var subTree = node.a;
 					return A3($elm$core$Elm$JsArray$foldr, helper, acc, subTree);
 				} else {
@@ -3995,32 +3995,32 @@ var $elm$core$Array$toList = function (array) {
 	return A3($elm$core$Array$foldr, $elm$core$List$cons, _List_Nil, array);
 };
 var $elm$core$Result$Err = function (a) {
-	return {$: 'Err', a: a};
+	return {$: 1, a: a};
 };
 var $elm$json$Json$Decode$Failure = F2(
 	function (a, b) {
-		return {$: 'Failure', a: a, b: b};
+		return {$: 3, a: a, b: b};
 	});
 var $elm$json$Json$Decode$Field = F2(
 	function (a, b) {
-		return {$: 'Field', a: a, b: b};
+		return {$: 0, a: a, b: b};
 	});
 var $elm$json$Json$Decode$Index = F2(
 	function (a, b) {
-		return {$: 'Index', a: a, b: b};
+		return {$: 1, a: a, b: b};
 	});
 var $elm$core$Result$Ok = function (a) {
-	return {$: 'Ok', a: a};
+	return {$: 0, a: a};
 };
 var $elm$json$Json$Decode$OneOf = function (a) {
-	return {$: 'OneOf', a: a};
+	return {$: 2, a: a};
 };
-var $elm$core$Basics$False = {$: 'False'};
+var $elm$core$Basics$False = 1;
 var $elm$core$Basics$add = _Basics_add;
 var $elm$core$Maybe$Just = function (a) {
-	return {$: 'Just', a: a};
+	return {$: 0, a: a};
 };
-var $elm$core$Maybe$Nothing = {$: 'Nothing'};
+var $elm$core$Maybe$Nothing = {$: 1};
 var $elm$core$String$all = _String_all;
 var $elm$core$Basics$and = _Basics_and;
 var $elm$core$Basics$append = _Utils_append;
@@ -4145,12 +4145,12 @@ var $elm$json$Json$Decode$errorToStringHelp = F2(
 		errorToStringHelp:
 		while (true) {
 			switch (error.$) {
-				case 'Field':
+				case 0:
 					var f = error.a;
 					var err = error.b;
 					var isSimple = function () {
 						var _v1 = $elm$core$String$uncons(f);
-						if (_v1.$ === 'Nothing') {
+						if (_v1.$ === 1) {
 							return false;
 						} else {
 							var _v2 = _v1.a;
@@ -4165,7 +4165,7 @@ var $elm$json$Json$Decode$errorToStringHelp = F2(
 					error = $temp$error;
 					context = $temp$context;
 					continue errorToStringHelp;
-				case 'Index':
+				case 1:
 					var i = error.a;
 					var err = error.b;
 					var indexName = '[' + ($elm$core$String$fromInt(i) + ']');
@@ -4174,7 +4174,7 @@ var $elm$json$Json$Decode$errorToStringHelp = F2(
 					error = $temp$error;
 					context = $temp$context;
 					continue errorToStringHelp;
-				case 'OneOf':
+				case 2:
 					var errors = error.a;
 					if (!errors.b) {
 						return 'Ran into a Json.Decode.oneOf with no possibilities' + function () {
@@ -4238,7 +4238,7 @@ var $elm$json$Json$Decode$errorToStringHelp = F2(
 var $elm$core$Array$branchFactor = 32;
 var $elm$core$Array$Array_elm_builtin = F4(
 	function (a, b, c, d) {
-		return {$: 'Array_elm_builtin', a: a, b: b, c: c, d: d};
+		return {$: 0, a: a, b: b, c: c, d: d};
 	});
 var $elm$core$Elm$JsArray$empty = _JsArray_empty;
 var $elm$core$Basics$ceiling = _Basics_ceiling;
@@ -4253,7 +4253,7 @@ var $elm$core$Array$shiftStep = $elm$core$Basics$ceiling(
 var $elm$core$Array$empty = A4($elm$core$Array$Array_elm_builtin, 0, $elm$core$Array$shiftStep, $elm$core$Elm$JsArray$empty, $elm$core$Elm$JsArray$empty);
 var $elm$core$Elm$JsArray$initialize = _JsArray_initialize;
 var $elm$core$Array$Leaf = function (a) {
-	return {$: 'Leaf', a: a};
+	return {$: 1, a: a};
 };
 var $elm$core$Basics$apL = F2(
 	function (f, x) {
@@ -4273,7 +4273,7 @@ var $elm$core$Basics$max = F2(
 	});
 var $elm$core$Basics$mul = _Basics_mul;
 var $elm$core$Array$SubTree = function (a) {
-	return {$: 'SubTree', a: a};
+	return {$: 0, a: a};
 };
 var $elm$core$Elm$JsArray$initializeFromList = _JsArray_initializeFromList;
 var $elm$core$Array$compressNodes = F2(
@@ -4320,25 +4320,25 @@ var $elm$core$Array$treeFromBuilder = F2(
 	});
 var $elm$core$Array$builderToArray = F2(
 	function (reverseNodeList, builder) {
-		if (!builder.nodeListSize) {
+		if (!builder.a) {
 			return A4(
 				$elm$core$Array$Array_elm_builtin,
-				$elm$core$Elm$JsArray$length(builder.tail),
+				$elm$core$Elm$JsArray$length(builder.c),
 				$elm$core$Array$shiftStep,
 				$elm$core$Elm$JsArray$empty,
-				builder.tail);
+				builder.c);
 		} else {
-			var treeLen = builder.nodeListSize * $elm$core$Array$branchFactor;
+			var treeLen = builder.a * $elm$core$Array$branchFactor;
 			var depth = $elm$core$Basics$floor(
 				A2($elm$core$Basics$logBase, $elm$core$Array$branchFactor, treeLen - 1));
-			var correctNodeList = reverseNodeList ? $elm$core$List$reverse(builder.nodeList) : builder.nodeList;
-			var tree = A2($elm$core$Array$treeFromBuilder, correctNodeList, builder.nodeListSize);
+			var correctNodeList = reverseNodeList ? $elm$core$List$reverse(builder.d) : builder.d;
+			var tree = A2($elm$core$Array$treeFromBuilder, correctNodeList, builder.a);
 			return A4(
 				$elm$core$Array$Array_elm_builtin,
-				$elm$core$Elm$JsArray$length(builder.tail) + treeLen,
+				$elm$core$Elm$JsArray$length(builder.c) + treeLen,
 				A2($elm$core$Basics$max, 5, depth * $elm$core$Array$shiftStep),
 				tree,
-				builder.tail);
+				builder.c);
 		}
 	});
 var $elm$core$Basics$idiv = _Basics_idiv;
@@ -4351,7 +4351,7 @@ var $elm$core$Array$initializeHelp = F5(
 				return A2(
 					$elm$core$Array$builderToArray,
 					false,
-					{nodeList: nodeList, nodeListSize: (len / $elm$core$Array$branchFactor) | 0, tail: tail});
+					{d: nodeList, a: (len / $elm$core$Array$branchFactor) | 0, c: tail});
 			} else {
 				var leaf = $elm$core$Array$Leaf(
 					A3($elm$core$Elm$JsArray$initialize, $elm$core$Array$branchFactor, fromIndex, fn));
@@ -4381,9 +4381,9 @@ var $elm$core$Array$initialize = F2(
 			return A5($elm$core$Array$initializeHelp, fn, initialFromIndex, len, _List_Nil, tail);
 		}
 	});
-var $elm$core$Basics$True = {$: 'True'};
+var $elm$core$Basics$True = 0;
 var $elm$core$Result$isOk = function (result) {
-	if (result.$ === 'Ok') {
+	if (!result.$) {
 		return true;
 	} else {
 		return false;
@@ -4394,21 +4394,21 @@ var $elm$json$Json$Decode$map2 = _Json_map2;
 var $elm$json$Json$Decode$succeed = _Json_succeed;
 var $elm$virtual_dom$VirtualDom$toHandlerInt = function (handler) {
 	switch (handler.$) {
-		case 'Normal':
+		case 0:
 			return 0;
-		case 'MayStopPropagation':
+		case 1:
 			return 1;
-		case 'MayPreventDefault':
+		case 2:
 			return 2;
 		default:
 			return 3;
 	}
 };
 var $author$project$DataModel$PictureGroup = function (a) {
-	return {$: 'PictureGroup', a: a};
+	return {$: 0, a: a};
 };
 var $author$project$DataModel$Prose = function (a) {
-	return {$: 'Prose', a: a};
+	return {$: 1, a: a};
 };
 var $elm$html$Html$a = _VirtualDom_node('a');
 var $elm$html$Html$div = _VirtualDom_node('div');
@@ -4431,8 +4431,8 @@ var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $author$project$HomePage$announcement = $author$project$DataModel$Prose(
 	{
-		headingClass: 'spoil-me',
-		longDesc: A2(
+		aK: 'spoil-me',
+		H: A2(
 			$elm$html$Html$div,
 			_List_Nil,
 			_List_fromArray(
@@ -4463,71 +4463,71 @@ var $author$project$HomePage$announcement = $author$project$DataModel$Prose(
 						])),
 					$elm$html$Html$text('to see things I need, but don\'t feel like you have to get anything or get stuff from there. And just yell at them if you have questions. :)')
 				])),
-		meta: {
-			id: 'shower',
-			name: $elm$html$Html$text('Spoil Me!'),
-			title: $elm$html$Html$text('The "Spoil Me" Zone!')
+		p: {
+			A: 'shower',
+			J: $elm$html$Html$text('Spoil Me!'),
+			Q: $elm$html$Html$text('The "Spoil Me" Zone!')
 		},
-		sectionClass: 'bg-light',
-		shortDesc: $elm$html$Html$text('You can get me stuff on the internet!')
+		aU: 'bg-light',
+		N: $elm$html$Html$text('You can get me stuff on the internet!')
 	});
 var $author$project$HomePage$mom_pics = _List_fromArray(
 	[
 		{
-		bigUrl: 'images/mom/22_weeks.jpg',
-		longDesc: $elm$html$Html$text('Just look at that bump!'),
-		shortDesc: $elm$html$Html$text('22 Weeks!'),
-		smallUrl: 'images/mom/22_weeks_small.jpg'
+		T: 'images/mom/22_weeks.jpg',
+		H: $elm$html$Html$text('Just look at that bump!'),
+		N: $elm$html$Html$text('22 Weeks!'),
+		as: 'images/mom/22_weeks_small.jpg'
 	},
 		{
-		bigUrl: 'images/mom/26_weeks.jpg',
-		longDesc: $elm$html$Html$text('The bun\'s rising!'),
-		shortDesc: $elm$html$Html$text('26 Weeks!'),
-		smallUrl: 'images/mom/26_weeks_small.jpg'
+		T: 'images/mom/26_weeks.jpg',
+		H: $elm$html$Html$text('The bun\'s rising!'),
+		N: $elm$html$Html$text('26 Weeks!'),
+		as: 'images/mom/26_weeks_small.jpg'
 	}
 	]);
 var $elm$html$Html$i = _VirtualDom_node('i');
 var $author$project$HomePage$nursery_pics = _List_fromArray(
 	[
 		{
-		bigUrl: 'images/nursery/IMG_8874.jpg',
-		longDesc: $elm$html$Html$text('Didn\'t mom do a great job picking it all out??'),
-		shortDesc: $elm$html$Html$text('I have a bedroom!'),
-		smallUrl: 'images/nursery/IMG_8874_small.jpg'
+		T: 'images/nursery/IMG_8874.jpg',
+		H: $elm$html$Html$text('Didn\'t mom do a great job picking it all out??'),
+		N: $elm$html$Html$text('I have a bedroom!'),
+		as: 'images/nursery/IMG_8874_small.jpg'
 	},
 		{
-		bigUrl: 'images/nursery/IMG_8824.jpg',
-		longDesc: $elm$html$Html$text('I bet I\'ll like princesses and dragons!'),
-		shortDesc: $elm$html$Html$text('With pictures!'),
-		smallUrl: 'images/nursery/IMG_8824_small.jpg'
+		T: 'images/nursery/IMG_8824.jpg',
+		H: $elm$html$Html$text('I bet I\'ll like princesses and dragons!'),
+		N: $elm$html$Html$text('With pictures!'),
+		as: 'images/nursery/IMG_8824_small.jpg'
 	},
 		{
-		bigUrl: 'images/nursery/IMG_8804.jpg',
-		longDesc: $elm$html$Html$text('Aren\'t they dreamy?'),
-		shortDesc: $elm$html$Html$text('Here, see \'em better!'),
-		smallUrl: 'images/nursery/IMG_8804_small.jpg'
+		T: 'images/nursery/IMG_8804.jpg',
+		H: $elm$html$Html$text('Aren\'t they dreamy?'),
+		N: $elm$html$Html$text('Here, see \'em better!'),
+		as: 'images/nursery/IMG_8804_small.jpg'
 	},
 		{
-		bigUrl: 'images/nursery/IMG_8796.jpg',
-		longDesc: $elm$html$Html$text('They\'re so snuggly!'),
-		shortDesc: $elm$html$Html$text('Oh! Oh! And my stuffed animals!'),
-		smallUrl: 'images/nursery/IMG_8796_small.jpg'
+		T: 'images/nursery/IMG_8796.jpg',
+		H: $elm$html$Html$text('They\'re so snuggly!'),
+		N: $elm$html$Html$text('Oh! Oh! And my stuffed animals!'),
+		as: 'images/nursery/IMG_8796_small.jpg'
 	},
 		{
-		bigUrl: 'images/nursery/IMG_8825.jpg',
-		longDesc: $elm$html$Html$text('Time travel is real, y\'all!'),
-		shortDesc: $elm$html$Html$text('A pic of me from the future!'),
-		smallUrl: 'images/nursery/IMG_8825_small.jpg'
+		T: 'images/nursery/IMG_8825.jpg',
+		H: $elm$html$Html$text('Time travel is real, y\'all!'),
+		N: $elm$html$Html$text('A pic of me from the future!'),
+		as: 'images/nursery/IMG_8825_small.jpg'
 	},
 		{
-		bigUrl: 'images/nursery/IMG_8827.jpg',
-		longDesc: $elm$html$Html$text('I already have good taste.. ;)'),
-		shortDesc: $elm$html$Html$text('Look at my pretty curtains!'),
-		smallUrl: 'images/nursery/IMG_8827_small.jpg'
+		T: 'images/nursery/IMG_8827.jpg',
+		H: $elm$html$Html$text('I already have good taste.. ;)'),
+		N: $elm$html$Html$text('Look at my pretty curtains!'),
+		as: 'images/nursery/IMG_8827_small.jpg'
 	},
 		{
-		bigUrl: 'images/nursery/IMG_8830.jpg',
-		longDesc: A2(
+		T: 'images/nursery/IMG_8830.jpg',
+		H: A2(
 			$elm$html$Html$div,
 			_List_Nil,
 			_List_fromArray(
@@ -4542,13 +4542,13 @@ var $author$project$HomePage$nursery_pics = _List_fromArray(
 						])),
 					$elm$html$Html$text(' one of them...')
 				])),
-		shortDesc: $elm$html$Html$text('My Rocking Dragon and Kitty!'),
-		smallUrl: 'images/nursery/IMG_8830_small.jpg'
+		N: $elm$html$Html$text('My Rocking Dragon and Kitty!'),
+		as: 'images/nursery/IMG_8830_small.jpg'
 	},
 		{
-		bigUrl: 'images/nursery/IMG_8787.jpg',
-		longDesc: $elm$html$Html$text('I start off pretty small, you know. :)'),
-		shortDesc: A2(
+		T: 'images/nursery/IMG_8787.jpg',
+		H: $elm$html$Html$text('I start off pretty small, you know. :)'),
+		N: A2(
 			$elm$html$Html$div,
 			_List_Nil,
 			_List_fromArray(
@@ -4563,58 +4563,58 @@ var $author$project$HomePage$nursery_pics = _List_fromArray(
 						])),
 					$elm$html$Html$text(' bed.')
 				])),
-		smallUrl: 'images/nursery/IMG_8787_small.jpg'
+		as: 'images/nursery/IMG_8787_small.jpg'
 	}
 	]);
 var $author$project$HomePage$ultrasound_pics = _List_fromArray(
 	[
 		{
-		bigUrl: 'images/ultrasound/2176105_0036.jpg',
-		longDesc: $elm$html$Html$text('Just look at the cuteness!'),
-		shortDesc: $elm$html$Html$text('My Pretty Face!'),
-		smallUrl: 'images/ultrasound/2176105_0036_small.jpg'
+		T: 'images/ultrasound/2176105_0036.jpg',
+		H: $elm$html$Html$text('Just look at the cuteness!'),
+		N: $elm$html$Html$text('My Pretty Face!'),
+		as: 'images/ultrasound/2176105_0036_small.jpg'
 	},
 		{
-		bigUrl: 'images/ultrasound/2176105_0018.jpg',
-		longDesc: $elm$html$Html$text('Little Miss Twinkletoes!'),
-		shortDesc: $elm$html$Html$text('And my hoof!'),
-		smallUrl: 'images/ultrasound/2176105_0018_small.jpg'
+		T: 'images/ultrasound/2176105_0018.jpg',
+		H: $elm$html$Html$text('Little Miss Twinkletoes!'),
+		N: $elm$html$Html$text('And my hoof!'),
+		as: 'images/ultrasound/2176105_0018_small.jpg'
 	},
 		{
-		bigUrl: 'images/ultrasound/2176105_0009.jpg',
-		longDesc: $elm$html$Html$text('(Gah, you guys! Did you really...?! *sigh*)'),
-		shortDesc: $elm$html$Html$text('And.. er, well, I\'m a girl!'),
-		smallUrl: 'images/ultrasound/2176105_0009_small.jpg'
+		T: 'images/ultrasound/2176105_0009.jpg',
+		H: $elm$html$Html$text('(Gah, you guys! Did you really...?! *sigh*)'),
+		N: $elm$html$Html$text('And.. er, well, I\'m a girl!'),
+		as: 'images/ultrasound/2176105_0009_small.jpg'
 	}
 	]);
 var $author$project$HomePage$model = _List_fromArray(
 	[
 		$author$project$DataModel$PictureGroup(
 		{
-			meta: {
-				id: 'ultrasound',
-				name: $elm$html$Html$text('Ultrasound'),
-				title: $elm$html$Html$text('My first pics!')
+			p: {
+				A: 'ultrasound',
+				J: $elm$html$Html$text('Ultrasound'),
+				Q: $elm$html$Html$text('My first pics!')
 			},
-			pics: $author$project$HomePage$ultrasound_pics
+			aR: $author$project$HomePage$ultrasound_pics
 		}),
 		$author$project$DataModel$PictureGroup(
 		{
-			meta: {
-				id: 'mom',
-				name: $elm$html$Html$text('Mom\'s Progress'),
-				title: $elm$html$Html$text('Mom\'s Progress')
+			p: {
+				A: 'mom',
+				J: $elm$html$Html$text('Mom\'s Progress'),
+				Q: $elm$html$Html$text('Mom\'s Progress')
 			},
-			pics: $author$project$HomePage$mom_pics
+			aR: $author$project$HomePage$mom_pics
 		}),
 		$author$project$DataModel$PictureGroup(
 		{
-			meta: {
-				id: 'nursery',
-				name: $elm$html$Html$text('Nursery'),
-				title: $elm$html$Html$text('Winnie\'s Place')
+			p: {
+				A: 'nursery',
+				J: $elm$html$Html$text('Nursery'),
+				Q: $elm$html$Html$text('Winnie\'s Place')
 			},
-			pics: $author$project$HomePage$nursery_pics
+			aR: $author$project$HomePage$nursery_pics
 		}),
 		$author$project$HomePage$announcement
 	]);
@@ -4781,12 +4781,12 @@ var $elm$core$String$append = _String_append;
 var $elm$html$Html$li = _VirtualDom_node('li');
 var $author$project$DataModel$navItem = function (sec) {
 	var _v0 = function () {
-		if (sec.$ === 'PictureGroup') {
+		if (!sec.$) {
 			var group = sec.a;
-			return _Utils_Tuple2(group.meta.id, group.meta.name);
+			return _Utils_Tuple2(group.p.A, group.p.J);
 		} else {
 			var prose = sec.a;
-			return _Utils_Tuple2(prose.meta.id, prose.meta.name);
+			return _Utils_Tuple2(prose.p.A, prose.p.J);
 		}
 	}();
 	var identifier = _v0.a;
@@ -4916,7 +4916,7 @@ var $author$project$DataModel$renderPicture = function (pic) {
 						_List_fromArray(
 							[
 								$elm$html$Html$Attributes$class('lightbox'),
-								$elm$html$Html$Attributes$href(pic.bigUrl)
+								$elm$html$Html$Attributes$href(pic.T)
 							]),
 						_List_fromArray(
 							[
@@ -4925,7 +4925,7 @@ var $author$project$DataModel$renderPicture = function (pic) {
 								_List_fromArray(
 									[
 										$elm$html$Html$Attributes$class('card-img-top'),
-										$elm$html$Html$Attributes$src(pic.smallUrl)
+										$elm$html$Html$Attributes$src(pic.as)
 									]),
 								_List_Nil)
 							])),
@@ -4949,7 +4949,7 @@ var $author$project$DataModel$renderPicture = function (pic) {
 												$elm$html$Html$Attributes$href('#')
 											]),
 										_List_fromArray(
-											[pic.shortDesc]))
+											[pic.N]))
 									])),
 								A2(
 								$elm$html$Html$p,
@@ -4958,21 +4958,21 @@ var $author$project$DataModel$renderPicture = function (pic) {
 										$elm$html$Html$Attributes$class('text-muted card-text')
 									]),
 								_List_fromArray(
-									[pic.longDesc]))
+									[pic.H]))
 							]))
 					]))
 			]));
 };
 var $elm$html$Html$section = _VirtualDom_node('section');
 var $author$project$DataModel$renderSection = function (sec) {
-	if (sec.$ === 'PictureGroup') {
+	if (!sec.$) {
 		var group = sec.a;
 		return A2(
 			$elm$html$Html$section,
 			_List_fromArray(
 				[
 					$elm$html$Html$Attributes$class('gallery-block cards-gallery'),
-					$elm$html$Html$Attributes$id(group.meta.id)
+					$elm$html$Html$Attributes$id(group.p.A)
 				]),
 			_List_fromArray(
 				[
@@ -4996,7 +4996,7 @@ var $author$project$DataModel$renderSection = function (sec) {
 									$elm$html$Html$h2,
 									_List_Nil,
 									_List_fromArray(
-										[group.meta.title]))
+										[group.p.Q]))
 								])),
 							A2(
 							$elm$html$Html$div,
@@ -5004,7 +5004,7 @@ var $author$project$DataModel$renderSection = function (sec) {
 								[
 									$elm$html$Html$Attributes$class('row')
 								]),
-							A2($elm$core$List$map, $author$project$DataModel$renderPicture, group.pics))
+							A2($elm$core$List$map, $author$project$DataModel$renderPicture, group.aR))
 						]))
 				]));
 	} else {
@@ -5013,8 +5013,8 @@ var $author$project$DataModel$renderSection = function (sec) {
 			$elm$html$Html$section,
 			_List_fromArray(
 				[
-					$elm$html$Html$Attributes$class(prose.sectionClass),
-					$elm$html$Html$Attributes$id(prose.meta.id)
+					$elm$html$Html$Attributes$class(prose.aU),
+					$elm$html$Html$Attributes$id(prose.p.A)
 				]),
 			_List_fromArray(
 				[
@@ -5031,7 +5031,7 @@ var $author$project$DataModel$renderSection = function (sec) {
 							_List_fromArray(
 								[
 									$elm$html$Html$Attributes$class(
-									A2($elm$core$String$append, 'heading ', prose.headingClass))
+									A2($elm$core$String$append, 'heading ', prose.aK))
 								]),
 							_List_fromArray(
 								[
@@ -5039,7 +5039,7 @@ var $author$project$DataModel$renderSection = function (sec) {
 									$elm$html$Html$h2,
 									_List_Nil,
 									_List_fromArray(
-										[prose.meta.title]))
+										[prose.p.Q]))
 								])),
 							A2(
 							$elm$html$Html$div,
@@ -5064,12 +5064,12 @@ var $author$project$DataModel$renderSection = function (sec) {
 													$elm$html$Html$Attributes$class('lead')
 												]),
 											_List_fromArray(
-												[prose.shortDesc])),
+												[prose.N])),
 											A2(
 											$elm$html$Html$p,
 											_List_Nil,
 											_List_fromArray(
-												[prose.longDesc]))
+												[prose.H]))
 										]))
 								]))
 						]))
