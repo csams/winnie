@@ -4404,9 +4404,6 @@ var $elm$virtual_dom$VirtualDom$toHandlerInt = function (handler) {
 			return 3;
 	}
 };
-var $author$project$DataModel$PictureGroup = function (a) {
-	return {$: 0, a: a};
-};
 var $author$project$DataModel$Prose = function (a) {
 	return {$: 1, a: a};
 };
@@ -4471,6 +4468,9 @@ var $author$project$HomePage$announcement = $author$project$DataModel$Prose(
 		aU: 'bg-light',
 		N: $elm$html$Html$text('You can get me stuff on the internet!')
 	});
+var $author$project$DataModel$PictureGroup = function (a) {
+	return {$: 0, a: a};
+};
 var $author$project$HomePage$mom_pics = _List_fromArray(
 	[
 		{
@@ -4486,6 +4486,15 @@ var $author$project$HomePage$mom_pics = _List_fromArray(
 		as: 'images/mom/26_weeks_small.jpg'
 	}
 	]);
+var $author$project$HomePage$mom = $author$project$DataModel$PictureGroup(
+	{
+		p: {
+			A: 'mom',
+			J: $elm$html$Html$text('Mom\'s Progress'),
+			Q: $elm$html$Html$text('Mom\'s Progress')
+		},
+		aR: $author$project$HomePage$mom_pics
+	});
 var $elm$html$Html$i = _VirtualDom_node('i');
 var $author$project$HomePage$nursery_pics = _List_fromArray(
 	[
@@ -4566,6 +4575,15 @@ var $author$project$HomePage$nursery_pics = _List_fromArray(
 		as: 'images/nursery/IMG_8787_small.jpg'
 	}
 	]);
+var $author$project$HomePage$nursery = $author$project$DataModel$PictureGroup(
+	{
+		p: {
+			A: 'nursery',
+			J: $elm$html$Html$text('Nursery'),
+			Q: $elm$html$Html$text('Winnie\'s Place')
+		},
+		aR: $author$project$HomePage$nursery_pics
+	});
 var $author$project$HomePage$ultrasound_pics = _List_fromArray(
 	[
 		{
@@ -4587,37 +4605,17 @@ var $author$project$HomePage$ultrasound_pics = _List_fromArray(
 		as: 'images/ultrasound/2176105_0009_small.jpg'
 	}
 	]);
+var $author$project$HomePage$ultrasound = $author$project$DataModel$PictureGroup(
+	{
+		p: {
+			A: 'ultrasound',
+			J: $elm$html$Html$text('Ultrasound'),
+			Q: $elm$html$Html$text('My first pics!')
+		},
+		aR: $author$project$HomePage$ultrasound_pics
+	});
 var $author$project$HomePage$model = _List_fromArray(
-	[
-		$author$project$DataModel$PictureGroup(
-		{
-			p: {
-				A: 'ultrasound',
-				J: $elm$html$Html$text('Ultrasound'),
-				Q: $elm$html$Html$text('My first pics!')
-			},
-			aR: $author$project$HomePage$ultrasound_pics
-		}),
-		$author$project$DataModel$PictureGroup(
-		{
-			p: {
-				A: 'mom',
-				J: $elm$html$Html$text('Mom\'s Progress'),
-				Q: $elm$html$Html$text('Mom\'s Progress')
-			},
-			aR: $author$project$HomePage$mom_pics
-		}),
-		$author$project$DataModel$PictureGroup(
-		{
-			p: {
-				A: 'nursery',
-				J: $elm$html$Html$text('Nursery'),
-				Q: $elm$html$Html$text('Winnie\'s Place')
-			},
-			aR: $author$project$HomePage$nursery_pics
-		}),
-		$author$project$HomePage$announcement
-	]);
+	[$author$project$HomePage$ultrasound, $author$project$HomePage$mom, $author$project$HomePage$nursery, $author$project$HomePage$announcement]);
 var $elm$core$List$foldrHelper = F4(
 	function (fn, acc, ctr, ls) {
 		if (!ls.b) {

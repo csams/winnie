@@ -1,9 +1,8 @@
 module HomePage exposing (..)
 
+import DataModel exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
-
-import DataModel exposing (..)
 
 
 ultrasound_pics : List (Picture a)
@@ -26,6 +25,18 @@ ultrasound_pics =
     ]
 
 
+ultrasound : Section a
+ultrasound =
+    PictureGroup
+        { meta =
+            { id = "ultrasound"
+            , name = text "Ultrasound"
+            , title = text "My first pics!"
+            }
+        , pics = ultrasound_pics
+        }
+
+
 mom_pics : List (Picture a)
 mom_pics =
     [ { bigUrl = "images/mom/22_weeks.jpg"
@@ -39,6 +50,18 @@ mom_pics =
       , longDesc = text "The bun's rising!"
       }
     ]
+
+
+mom : Section a
+mom =
+    PictureGroup
+        { meta =
+            { id = "mom"
+            , name = text "Mom's Progress"
+            , title = text "Mom's Progress"
+            }
+        , pics = mom_pics
+        }
 
 
 nursery_pics : List (Picture a)
@@ -86,6 +109,18 @@ nursery_pics =
     ]
 
 
+nursery : Section a
+nursery =
+    PictureGroup
+        { meta =
+            { id = "nursery"
+            , name = text "Nursery"
+            , title = text "Winnie's Place"
+            }
+        , pics = nursery_pics
+        }
+
+
 announcement : Section a
 announcement =
     Prose
@@ -112,30 +147,9 @@ announcement =
 
 model : Model a
 model =
-    [ PictureGroup
-        { meta =
-            { id = "ultrasound"
-            , name = text "Ultrasound"
-            , title = text "My first pics!"
-            }
-        , pics = ultrasound_pics
-        }
-    , PictureGroup
-        { meta =
-            { id = "mom"
-            , name = text "Mom's Progress"
-            , title = text "Mom's Progress"
-            }
-        , pics = mom_pics
-        }
-    , PictureGroup
-        { meta =
-            { id = "nursery"
-            , name = text "Nursery"
-            , title = text "Winnie's Place"
-            }
-        , pics = nursery_pics
-        }
+    [ ultrasound
+    , mom
+    , nursery
     , announcement
     ]
 
