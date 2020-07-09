@@ -1,8 +1,48 @@
 module HomePage exposing (..)
 
+import Browser
 import DataModel exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
+
+
+main : Program () (Model Msg) Msg
+main =
+    Browser.element
+        { init = init
+        , subscriptions = subscriptions
+        , update = update
+        , view = view
+        }
+
+
+init : () -> ( Model Msg, Cmd Msg )
+init _ =
+    ( model, Cmd.none )
+
+
+update : Msg -> Model Msg -> ( Model Msg, Cmd Msg )
+update _ mod =
+    ( mod, Cmd.none )
+
+
+subscriptions : Model Msg -> Sub Msg
+subscriptions _ =
+    Sub.none
+
+
+type Msg
+    = None
+
+
+model : Model a
+model =
+    [ ultrasound
+    , mom
+    , nursery
+    , announcement
+    , games
+    ]
 
 
 ultrasound_pics : List (Picture a)
@@ -48,6 +88,11 @@ mom_pics =
       , smallUrl = "images/mom/26_weeks_small.jpg"
       , shortDesc = text "26 Weeks!"
       , longDesc = text "The bun's rising!"
+      }
+    , { bigUrl = "images/mom/30_weeks.jpg"
+      , smallUrl = "images/mom/30_weeks_small.jpg"
+      , shortDesc = text "30 Weeks!"
+      , longDesc = text "We're in the home stretch!"
       }
     ]
 
@@ -129,7 +174,7 @@ announcement =
             , name = text "Spoil Me!"
             , title = text """The "Spoil Me" Zone!"""
             }
-        , headingClass = "spoil-me"
+        , headingClass = "prose"
         , sectionClass = "bg-light"
         , shortDesc = text "You can get me stuff on the internet!"
         , longDesc =
@@ -145,15 +190,18 @@ announcement =
         }
 
 
-model : Model a
-model =
-    [ ultrasound
-    , mom
-    , nursery
-    , announcement
-    ]
-
-
-main : Html a
-main =
-    view model
+games : Section a
+games =
+    Prose
+        { meta =
+            { id = "games"
+            , name = text "Games"
+            , title = text """Shower Games!"""
+            }
+        , headingClass = "prose"
+        , sectionClass = "bg-dark text-white"
+        , shortDesc = text "Join Mom and Dad for some games at my pre-birthday party!"
+        , longDesc =
+            div []
+                [ text "Dad says he'll put some links here soon." ]
+        }

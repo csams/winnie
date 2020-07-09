@@ -2,6 +2,40 @@ module DataModel exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
+import Time
+
+
+type GameState
+    = Begin
+    | Running
+    | Paused
+    | End
+
+
+type Game a
+    = GuessGame
+        { gameId : String
+        , gameName : String
+        , gameDesc : String
+        , gamePic : String
+        , gameState : GameState
+        , correctValue : Int
+        }
+
+
+type alias User =
+    { username : String
+    , email : String
+    , password : String
+    }
+
+
+type alias Guess =
+    { user : String
+    , game : String
+    , guess : Int
+    , lastUpdate : Time.Posix
+    }
 
 
 type alias Picture a =
@@ -90,9 +124,9 @@ renderBanner =
 
 renderFooter : Html a
 renderFooter =
-    footer [ class "py-5 bg-dark" ]
+    footer [ class "py-5 bg-light" ]
         [ div [ class "container" ]
-            [ p [ class "m-0 text-center text-white" ]
+            [ p [ class "m-0 text-center" ]
                 [ text "Copyright © Christopher, Jo Ellen, and Winnie Sams 2020" ]
             ]
         ]
