@@ -5361,6 +5361,72 @@ var $author$project$HomePage$ultrasound_pics = _List_fromArray(
 		H: $elm$html$Html$text('(Gah, you guys! Did you really...?! *sigh*)'),
 		N: $elm$html$Html$text('And.. er, well, I\'m a girl!'),
 		ar: 'images/ultrasound/2176105_0009_small.jpg'
+	},
+		{
+		T: 'images/ultrasound/32_weeks/hoof.jpg',
+		H: $elm$html$Html$text('I might be a gymnast!'),
+		N: $elm$html$Html$text('Surprise hoof again!'),
+		ar: 'images/ultrasound/32_weeks/hoof_small.jpg'
+	},
+		{
+		T: 'images/ultrasound/32_weeks/face01.jpg',
+		H: $elm$html$Html$text('Look at my pretty mug!'),
+		N: $elm$html$Html$text('*smirk*'),
+		ar: 'images/ultrasound/32_weeks/face01_small.jpg'
+	},
+		{
+		T: 'images/ultrasound/32_weeks/face02.jpg',
+		H: $elm$html$Html$text('So sleepy..'),
+		N: $elm$html$Html$text('ZZzz..'),
+		ar: 'images/ultrasound/32_weeks/face02_small.jpg'
+	},
+		{
+		T: 'images/ultrasound/32_weeks/face03.jpg',
+		H: $elm$html$Html$text('And kinda hungry!'),
+		N: $elm$html$Html$text('Om nom nom'),
+		ar: 'images/ultrasound/32_weeks/face03_small.jpg'
+	},
+		{
+		T: 'images/ultrasound/32_weeks/face04.jpg',
+		H: $elm$html$Html$text('And grumpy!'),
+		N: $elm$html$Html$text('*grrr*'),
+		ar: 'images/ultrasound/32_weeks/face04_small.jpg'
+	},
+		{
+		T: 'images/ultrasound/32_weeks/face06.jpg',
+		H: $elm$html$Html$text('I said I\'m hungry!'),
+		N: $elm$html$Html$text('NOM NOM'),
+		ar: 'images/ultrasound/32_weeks/face06_small.jpg'
+	},
+		{
+		T: 'images/ultrasound/32_weeks/face07.jpg',
+		H: $elm$html$Html$text('FOOOOOD!!!'),
+		N: $elm$html$Html$text('...'),
+		ar: 'images/ultrasound/32_weeks/face07_small.jpg'
+	},
+		{
+		T: 'images/ultrasound/32_weeks/face08.jpg',
+		H: $elm$html$Html$text('Lovin\' mom\'s frappacino!'),
+		N: $elm$html$Html$text('MMmm..'),
+		ar: 'images/ultrasound/32_weeks/face08_small.jpg'
+	},
+		{
+		T: 'images/ultrasound/32_weeks/face09.jpg',
+		H: $elm$html$Html$text('Sugar Coma!'),
+		N: $elm$html$Html$text('Honk Shoes'),
+		ar: 'images/ultrasound/32_weeks/face09_small.jpg'
+	},
+		{
+		T: 'images/ultrasound/32_weeks/face05.jpg',
+		H: $elm$html$Html$text('My best Gene Simmons impersonation!'),
+		N: $elm$html$Html$text('KISS!'),
+		ar: 'images/ultrasound/32_weeks/face05_small.jpg'
+	},
+		{
+		T: 'images/ultrasound/32_weeks/face10.jpg',
+		H: $elm$html$Html$text('See you soon!!!'),
+		N: $elm$html$Html$text('Almost here!'),
+		ar: 'images/ultrasound/32_weeks/face10_small.jpg'
 	}
 	]);
 var $author$project$HomePage$ultrasound = $author$project$DataModel$PictureGroup(

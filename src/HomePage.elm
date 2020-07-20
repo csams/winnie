@@ -62,6 +62,61 @@ ultrasound_pics =
       , shortDesc = text "And.. er, well, I'm a girl!"
       , longDesc = text "(Gah, you guys! Did you really...?! *sigh*)"
       }
+    , { bigUrl = "images/ultrasound/32_weeks/hoof.jpg"
+      , smallUrl = "images/ultrasound/32_weeks/hoof_small.jpg"
+      , shortDesc = text "Surprise hoof again!"
+      , longDesc = text "I might be a gymnast!"
+      }
+    , { bigUrl = "images/ultrasound/32_weeks/face01.jpg"
+      , smallUrl = "images/ultrasound/32_weeks/face01_small.jpg"
+      , shortDesc = text "*smirk*"
+      , longDesc = text "Look at my pretty mug!"
+      }
+    , { bigUrl = "images/ultrasound/32_weeks/face02.jpg"
+      , smallUrl = "images/ultrasound/32_weeks/face02_small.jpg"
+      , shortDesc = text "ZZzz.."
+      , longDesc = text "So sleepy.."
+      }
+    , { bigUrl = "images/ultrasound/32_weeks/face03.jpg"
+      , smallUrl = "images/ultrasound/32_weeks/face03_small.jpg"
+      , shortDesc = text "Om nom nom"
+      , longDesc = text "And kinda hungry!"
+      }
+    , { bigUrl = "images/ultrasound/32_weeks/face04.jpg"
+      , smallUrl = "images/ultrasound/32_weeks/face04_small.jpg"
+      , shortDesc = text "*grrr*"
+      , longDesc = text "And grumpy!"
+      }
+    , { bigUrl = "images/ultrasound/32_weeks/face06.jpg"
+      , smallUrl = "images/ultrasound/32_weeks/face06_small.jpg"
+      , shortDesc = text "NOM NOM"
+      , longDesc = text "I said I'm hungry!"
+      }
+    , { bigUrl = "images/ultrasound/32_weeks/face07.jpg"
+      , smallUrl = "images/ultrasound/32_weeks/face07_small.jpg"
+      , shortDesc = text "..."
+      , longDesc = text "FOOOOOD!!!"
+      }
+    , { bigUrl = "images/ultrasound/32_weeks/face08.jpg"
+      , smallUrl = "images/ultrasound/32_weeks/face08_small.jpg"
+      , shortDesc = text "MMmm.."
+      , longDesc = text "Lovin' mom's frappacino!"
+      }
+    , { bigUrl = "images/ultrasound/32_weeks/face09.jpg"
+      , smallUrl = "images/ultrasound/32_weeks/face09_small.jpg"
+      , shortDesc = text "Honk Shoes"
+      , longDesc = text "Sugar Coma!"
+      }
+    , { bigUrl = "images/ultrasound/32_weeks/face05.jpg"
+      , smallUrl = "images/ultrasound/32_weeks/face05_small.jpg"
+      , shortDesc = text "KISS!"
+      , longDesc = text "My best Gene Simmons impersonation!"
+      }
+    , { bigUrl = "images/ultrasound/32_weeks/face10.jpg"
+      , smallUrl = "images/ultrasound/32_weeks/face10_small.jpg"
+      , shortDesc = text "Almost here!"
+      , longDesc = text "See you soon!!!"
+      }
     ]
 
 
